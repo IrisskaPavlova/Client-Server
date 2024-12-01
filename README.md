@@ -1,5 +1,5 @@
 # Python Client-Server programme
-This laba is about interprocess communication via a file descriptor.
+This laba is about interprocess communication via TCP.
 Our python programm is based on client-server algorithm: 
   -there are two apps: client and server. Applications exchange messages: ping(client)-pong(server response)
 
