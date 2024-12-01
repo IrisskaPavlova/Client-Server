@@ -4,7 +4,7 @@ from server import port, address,encoding
 
 socket = Socket.socket()
 
-# выполняем подключение к сокету на сервере
+# connecting to a socket on the server
 try:
 	socket.connect((address, port))
 except OSError:
@@ -21,13 +21,13 @@ while 1:
 		if message == "q":
 			print("\nThe connection is broken!")
 			break
-	except KeyboardInterrupt: # программа ждет input, а пользователь отключается не через q
+	except KeyboardInterrupt: #programm is waiting forinput, however the user is disconnecting using not 'q'
 		print("\n\nThe connection is broken!")
 		break
 
 	try:
 		socket.sendall(message.encode(encoding))
-	except OSError: # сервер больше не подключен
+	except OSError: # server is not connected anymore
 		print("\nThe server is not running!")
 		break
 
