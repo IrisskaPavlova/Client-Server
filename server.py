@@ -1,7 +1,7 @@
 import socket as Socket
 
 address = "localhost" # localhost ensures that clients are running only on the local computer
-port = 801
+port = 1801
 dataPackageSize = 1024 # max size of buffer in bytes 
 encoding = "utf-8"
 
@@ -15,7 +15,7 @@ def getDataPackage(connection):
 
 def startServer():
     socket = Socket.socket() # creating a server socket object
-    socket.settimeout(60)
+    socket.settimeout(180)
     try:
         socket.bind((address, port)) #assign the socket instance an IP address and a port number
     except OSError:
@@ -29,7 +29,7 @@ def startServer():
                                                         # address - address of connected client
         # if function accept() if waiting for client more than 1 minute -  throw TimeoutException
         except TimeoutError:
-            print("There have been no clients for 1 minute")
+            print("There have been no clients for 3 minutes")
             exit()
 
         print(f"{clientAddress}, has connected")

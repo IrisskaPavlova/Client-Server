@@ -7,7 +7,9 @@ Client is sending to the server a message and the server is returning a reversed
 Example: 
 input: hello it is me
 output: em si ti olleh
-
+# Requiments 
+OS: doesn`t matter
+Python 3
 # Run
 The client is communicating with server using terminal. To use the programm:
 1) Firstly run the server.py in dedicated terminal
@@ -17,7 +19,7 @@ The client is communicating with server using terminal. To use the programm:
 5) To finish communication with the server enter 'q' to stop the programm
 
 Some features:
-* server stops waiting for the client`s messages after 1 minute of silence
+* server stops waiting for the client`s messages after 3 minutes of silence
 * warning if the server is not running
 * if server is disconnected for some reasons, the client will see a message about it
   
